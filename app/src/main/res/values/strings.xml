@@ -3,6 +3,7 @@
 
     <string name="app_name">TumblrLaunchSample</string>
 	<string name="create_text_post">Create Text Post</string>
+	<string name="create_link_post">Create Link Post</string>
 	<string name="create_photo_post">Create Photo Post</string>
 	<string name="create_multi_photo_post">Create Photo Set Post</string>
 	<string name="view_blog">View a Blog</string>
