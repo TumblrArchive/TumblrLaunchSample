@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    tools:context=".MyActivity$PlaceholderFragment"
+	android:orientation="vertical"
+	>
+
+    <TextView
+        android:text="@string/create_text_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:id="@+id/create_text_post"
+		android:padding="12dp"/>
+	<TextView
+		android:text="@string/create_photo_post"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/create_photo_post"
+		android:padding="12dp"/>
+	<TextView
+		android:text="@string/create_multi_photo_post"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/create_multiple_photo_post"
+		android:padding="12dp"/>
+	<TextView
+		android:text="@string/view_blog"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/view_blog"
+		android:padding="12dp"/>
+	<TextView
+		android:text="@string/view_post"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/view_post"
+		android:padding="12dp"/>
+	<TextView
+		android:text="@string/view_tag"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/view_tag"
+		android:padding="12dp"/>
+
+
+
+</LinearLayout>
