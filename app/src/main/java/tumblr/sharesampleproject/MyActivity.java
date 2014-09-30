@@ -115,7 +115,7 @@ public class MyActivity extends Activity {
 		private final View.OnClickListener mLinkPostListner = new View.OnClickListener() {
 			public void onClick(View v) {
 
-				//Create a text post
+				//Create a link post
 				Intent textPost = new Intent();
 				textPost.setAction(Intent.ACTION_SEND);
 				textPost.setPackage(mPackageName);
