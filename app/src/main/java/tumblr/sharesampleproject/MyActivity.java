@@ -16,7 +16,7 @@ import java.util.List;
 
 public class MyActivity extends Activity {
 
-	private static final String mPackageName = "com.celray";
+	private static final String mPackageName = "com.tumblr";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
