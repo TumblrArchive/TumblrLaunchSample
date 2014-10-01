@@ -102,11 +102,11 @@ public class TumblrUtils {
 
 		if (!TextUtils.isEmpty(sanitizedBlogName)) {
 			link += "?blogName=" + sanitizedBlogName;
-		}
 
-		// Check the post ID.
-		if (postId > 0) {
-			link += "&postID=" + String.valueOf(postId);
+			// Check the post ID.
+			if (postId > 0) {
+				link += "&postID=" + String.valueOf(postId);
+			}
 		}
 
 		return Uri.parse(link);
