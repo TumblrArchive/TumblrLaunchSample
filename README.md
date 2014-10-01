@@ -1,6 +1,6 @@
 # Launching the Tumblr Android application
 
-Our application supports two deep linking approaches.  We use Android's share mechanism (which also allows developer's to share directly into our application) as well as a URL scheme.  This document will give examples of both.
+Our application supports two deep linking approaches.  We use Android's [share mechanism](http://developer.android.com/guide/components/intents-filters.html) (which also allows developer's to share directly into our application) as well as a URL scheme.  This document will give examples of both.
 
 ## Deep linking into the Tumblr app
 
