@@ -77,7 +77,7 @@ public class SampleActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// Create the text post intent.
-				final Intent textPostIntent = TumblrUtils.ShareIntentCreator.createShareTextIntent(
+				final Intent textPostIntent = TumblrUtils.createShareTextIntent(
 						"This is the post title.", "This is the body text.");
 
 				// Share!
@@ -89,7 +89,7 @@ public class SampleActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// Create the link post intent.
-				final Intent linkPostIntent = TumblrUtils.ShareIntentCreator.createShareLinkIntent(
+				final Intent linkPostIntent = TumblrUtils.createShareLinkIntent(
 						"Title of the link post", Uri.parse("http://tumblr.com"));
 
 				// Share!
@@ -101,7 +101,7 @@ public class SampleActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// Create the photo post intent.
-				final Intent photoPostIntent = TumblrUtils.ShareIntentCreator.createSharePhotoIntent(
+				final Intent photoPostIntent = TumblrUtils.createSharePhotoIntent(
 						Uri.parse("content://media/external/images/media/1"));
 
 				// Share!
@@ -119,7 +119,7 @@ public class SampleActivity extends Activity {
 				photoList.add(Uri.parse("content://media/external/images/media/3"));
 
 				// Create the photoset post intent.
-				final Intent photosetPostIntent = TumblrUtils.ShareIntentCreator.createSharePhotosetIntent(photoList);
+				final Intent photosetPostIntent = TumblrUtils.createSharePhotosetIntent(photoList);
 
 				// Share!
 				getActivity().startActivity(photosetPostIntent);
@@ -130,7 +130,7 @@ public class SampleActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// Deep link to a blog.
-				final Uri blogDataUri = TumblrUtils.DeepLinkCreator.createBlogUri("haseman");
+				final Uri blogDataUri = TumblrUtils.createBlogUri("haseman");
 
 				// Start the Tumblr app.
 				TumblrUtils.startTumblr(getActivity(), blogDataUri);
@@ -141,7 +141,7 @@ public class SampleActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// Deep link to a specific post.
-				final Uri postDataUri = TumblrUtils.DeepLinkCreator.createBlogUri("haseman", 94288096341L);
+				final Uri postDataUri = TumblrUtils.createBlogUri("haseman", 94288096341L);
 
 				// Start the Tumblr app.
 				TumblrUtils.startTumblr(getActivity(), postDataUri);
@@ -152,7 +152,7 @@ public class SampleActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// Deep link to a search results page.
-				final Uri searchDataUri = TumblrUtils.DeepLinkCreator.createSearchUri("cars");
+				final Uri searchDataUri = TumblrUtils.createSearchUri("cars");
 
 				// Start the Tumblr app.
 				TumblrUtils.startTumblr(getActivity(), searchDataUri);
