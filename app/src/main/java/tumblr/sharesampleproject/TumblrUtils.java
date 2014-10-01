@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Copyright (c) 2014 Tumblr. All rights reserved.
+ *
  * Helpful, neighborhood Tumblr utility methods that allow for deep linking into the Tumblr app and sharing content to
  * create new Tumblr posts.
  *
@@ -21,7 +23,7 @@ public class TumblrUtils {
 	/**
 	 * The Tumblr package name.
 	 */
-	public static final String TUMBLR_PACKAGE_NAME = "com.tumblr";
+	public static final String TUMBLR_PACKAGE_NAME = "com.celray";
 
 	/**
 	 * Starts the Tumblr application.

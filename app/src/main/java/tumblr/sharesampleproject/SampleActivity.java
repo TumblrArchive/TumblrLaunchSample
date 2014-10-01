@@ -15,7 +15,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Sample activity. This could be YOUR app!
+ * Sample activity to demonstrate use of the TumblrUtils
+ *
+ * Copyright (c) 2014 Tumblr. All rights reserved.
  *
  * @author haseman
  */
