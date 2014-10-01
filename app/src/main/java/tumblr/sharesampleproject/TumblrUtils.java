@@ -23,7 +23,7 @@ public class TumblrUtils {
 	/**
 	 * The Tumblr package name.
 	 */
-	public static final String TUMBLR_PACKAGE_NAME = "com.celray";
+	public static final String TUMBLR_PACKAGE_NAME = "com.tumblr";
 
 	/**
 	 * Starts the Tumblr application.
