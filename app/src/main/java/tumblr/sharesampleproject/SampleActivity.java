@@ -65,7 +65,7 @@ public class SampleActivity extends Activity {
 			tv.setOnClickListener(mViewTagListener);
 
 			// Check for the Tumblr app
-			if (!TumblrShareUtils.isTumblrInstalled(getActivity())) {
+			if (!TumblrUtils.isTumblrInstalled(getActivity())) {
 				Toast.makeText(getActivity().getApplicationContext(), "Tumblr is not on your phone, " +
 						"you're gonna have a bad time", Toast.LENGTH_LONG).show();
 			}
@@ -77,7 +77,7 @@ public class SampleActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// Create the text post intent.
-				final Intent textPostIntent = TumblrShareUtils.ShareIntentCreator.createShareTextIntent(
+				final Intent textPostIntent = TumblrUtils.ShareIntentCreator.createShareTextIntent(
 						"This is the post title.", "This is the body text.");
 
 				// Share!
@@ -89,7 +89,7 @@ public class SampleActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// Create the link post intent.
-				final Intent linkPostIntent = TumblrShareUtils.ShareIntentCreator.createShareLinkIntent(
+				final Intent linkPostIntent = TumblrUtils.ShareIntentCreator.createShareLinkIntent(
 						"Title of the link post", Uri.parse("http://tumblr.com"));
 
 				// Share!
@@ -101,7 +101,7 @@ public class SampleActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// Create the photo post intent.
-				final Intent photoPostIntent = TumblrShareUtils.ShareIntentCreator.createSharePhotoIntent(
+				final Intent photoPostIntent = TumblrUtils.ShareIntentCreator.createSharePhotoIntent(
 						Uri.parse("content://media/external/images/media/1"));
 
 				// Share!
@@ -119,7 +119,7 @@ public class SampleActivity extends Activity {
 				photoList.add(Uri.parse("content://media/external/images/media/3"));
 
 				// Create the photoset post intent.
-				final Intent photosetPostIntent = TumblrShareUtils.ShareIntentCreator.createSharePhotosetIntent(photoList);
+				final Intent photosetPostIntent = TumblrUtils.ShareIntentCreator.createSharePhotosetIntent(photoList);
 
 				// Share!
 				getActivity().startActivity(photosetPostIntent);
@@ -130,10 +130,10 @@ public class SampleActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// Deep link to a blog.
-				final Uri blogDataUri = TumblrShareUtils.DeepLinkCreator.createBlogDeepLink("haseman");
+				final Uri blogDataUri = TumblrUtils.DeepLinkCreator.createBlogUri("haseman");
 
 				// Start the Tumblr app.
-				TumblrShareUtils.startTumblr(getActivity(), blogDataUri);
+				TumblrUtils.startTumblr(getActivity(), blogDataUri);
 			}
 		};
 
@@ -141,10 +141,10 @@ public class SampleActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// Deep link to a specific post.
-				final Uri postDataUri = TumblrShareUtils.DeepLinkCreator.createBlogDeepLink("haseman", 94288096341L);
+				final Uri postDataUri = TumblrUtils.DeepLinkCreator.createBlogUri("haseman", 94288096341L);
 
 				// Start the Tumblr app.
-				TumblrShareUtils.startTumblr(getActivity(), postDataUri);
+				TumblrUtils.startTumblr(getActivity(), postDataUri);
 			}
 		};
 
@@ -152,10 +152,10 @@ public class SampleActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// Deep link to a search results page.
-				final Uri searchDataUri = TumblrShareUtils.DeepLinkCreator.createSearchDeepLink("cars");
+				final Uri searchDataUri = TumblrUtils.DeepLinkCreator.createSearchUri("cars");
 
 				// Start the Tumblr app.
-				TumblrShareUtils.startTumblr(getActivity(), searchDataUri);
+				TumblrUtils.startTumblr(getActivity(), searchDataUri);
 			}
 		};
 	}

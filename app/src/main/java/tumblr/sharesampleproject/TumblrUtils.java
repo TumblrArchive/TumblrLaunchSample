@@ -17,7 +17,7 @@ import java.util.List;
  *
  * @author brandon
  */
-public class TumblrShareUtils {
+public class TumblrUtils {
 	/**
 	 * The Tumblr package name.
 	 */
@@ -40,7 +40,7 @@ public class TumblrShareUtils {
 		final Intent viewIntent = new Intent();
 		viewIntent.setAction(Intent.ACTION_VIEW);
 		viewIntent.addCategory(Intent.CATEGORY_BROWSABLE);
-		viewIntent.setPackage(TumblrShareUtils.TUMBLR_PACKAGE_NAME);
+		viewIntent.setPackage(TumblrUtils.TUMBLR_PACKAGE_NAME);
 		viewIntent.setData(data);
 		activity.startActivity(viewIntent);
 	}
@@ -62,7 +62,7 @@ public class TumblrShareUtils {
 		final List<ApplicationInfo> apps = packageManager.getInstalledApplications(0);
 		boolean found = false;
 		for (ApplicationInfo app : apps) {
-			if (TumblrShareUtils.TUMBLR_PACKAGE_NAME.equals(app.packageName)) {
+			if (TumblrUtils.TUMBLR_PACKAGE_NAME.equals(app.packageName)) {
 				found = true;
 				break;
 			}
@@ -88,8 +88,8 @@ public class TumblrShareUtils {
 		 * 		the name of the blog to open inside of the Tumblr app.
 		 * @return the deep link URL.
 		 */
-		public static Uri createBlogDeepLink(final String blogName) {
-			return createBlogDeepLink(blogName, 0);
+		public static Uri createBlogUri(final String blogName) {
+			return createBlogUri(blogName, 0);
 		}
 
 		/**
@@ -101,7 +101,7 @@ public class TumblrShareUtils {
 		 * 		the post to open the blog to. This post will be at the top of the user's stream.
 		 * @return the deep link URL.
 		 */
-		public static Uri createBlogDeepLink(final String blogName, final long postId) {
+		public static Uri createBlogUri(final String blogName, final long postId) {
 			String link = URL_FORMAT_BASE + "blog/";
 
 			final String sanitizedBlogName = sanitizeBlogName(blogName);
@@ -125,7 +125,7 @@ public class TumblrShareUtils {
 		 * 		the term to search for.
 		 * @return the deep link URL.
 		 */
-		public static Uri createSearchDeepLink(final String searchTerm) {
+		public static Uri createSearchUri(final String searchTerm) {
 			String link = URL_FORMAT_BASE + "tag/";
 
 			if (!TextUtils.isEmpty(searchTerm)) {
