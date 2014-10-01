@@ -18,7 +18,7 @@ As you might imagine, the first URL opens a blog, the second a post from a blog,
 
 ## Sharing with Tumblr
 
-Tumblr supports generic photo, text, and video sharing as you might expect, however, by specifying our package you can tell Android you'd like to fire our application directly.  See the below code sampe (which is also in the sample project):
+Tumblr supports generic photo, text, and video sharing as you might expect, however, by specifying our package you can tell Android you'd like to fire our application directly.  See the below code sample (which is also in the sample project):
 
 ```java
 try {
