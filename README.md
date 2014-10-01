@@ -1,10 +1,10 @@
-#Launching the Tumblr Android application
+# Launching the Tumblr Android application
 
-Our application supports two deep launching approaches.  We use Android's share mechanism (which also allows developer's to share directly into our application) as well as a URL schema.  This document will give example of both.
+Our application supports two deep linking approaches.  We use Android's share mechanism (which also allows developer's to share directly into our application) as well as a URL scheme.  This document will give examples of both.
 
-##Deep linking into the Tumblr app
+## Deep linking into the Tumblr app
 
-The application supports a 'tumblr' URL schema and a slightly unconventional x-callback-url structure.  See a few url examples below
+The application supports a `tumblr` URL scheme and a slightly unconventional [x-callback-url](http://x-callback-url.com) structure (such that our Android and iOS apps both support the same URLs).  See a few URL examples below:
 
 ```
 tumblr://x-callback-url/blog?blogName=haseman
@@ -13,12 +13,14 @@ tumblr://x-callback-url/blog?blogName=haseman&postID=94288096341
 
 tumblr://x-callback-url/tag?tag=cars
 ```
-As you might imagine, the first url open's a blog, the second a post from a blog, and the last a tag.
 
-##Sharing with Tumblr
+As you might imagine, the first URL opens a blog, the second a post from a blog, and the last a tag.
+
+## Sharing with Tumblr
+
 Tumblr supports generic photo, text, and video sharing as you might expect, however, by specifying our package you can tell Android you'd like to fire our application directly.  See the below code sampe (which is also in the sample project)
 
-```
+```java
 try {
   Intent textPost = new Intent();
   textPost.setAction(Intent.ACTION_SEND);
@@ -31,4 +33,5 @@ try {
   Log.d("ShareExample", "Unable to find tumblr application", ex);
 }
 ```
-The sample code above will create a new text post in the Tumblr App (if it's installed) be careful, because if it isn't installed the following code will throw an exception.  For examples on creating photo and link posts please see the project itself.
+
+The sample code above will create a new text post in the [Tumblr app](https://play.google.com/store/apps/details?id=com.tumblr&hl=en) (if it's installed) be careful, because if it isn't installed the following code will throw an exception.  For examples on creating photo and link posts please see the project itself.
