@@ -152,7 +152,7 @@ public class SampleActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// Deep link to a search results page.
-				final Uri searchDataUri = TumblrUtils.createSearchUri("cars");
+				final Uri searchDataUri = TumblrUtils.createSearchUri("tumblr is cool");
 
 				// Start the Tumblr app.
 				TumblrUtils.startTumblr(getActivity(), searchDataUri);
