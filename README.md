@@ -4,7 +4,7 @@ Our application supports two deep linking approaches.  We use Android's [share m
 
 ## Deep linking into the Tumblr app
 
-The application supports a `tumblr` URL scheme and a slightly unconventional [x-callback-url](http://x-callback-url.com) structure (such that our Android and iOS apps both support the same URLs).  See a few URL examples below:
+The application supports a `tumblr` URL scheme and a slightly unconventional [x-callback-url](http://x-callback-url.com) structure (so that our [Android](https://play.google.com/store/apps/details?id=com.tumblr&hl=en) and [iOS](https://itunes.apple.com/us/app/tumblr/id305343404?mt=8) apps both support the same URLs).  See a few URL examples below:
 
 ```
 tumblr://x-callback-url/blog?blogName=haseman
@@ -18,7 +18,7 @@ As you might imagine, the first URL opens a blog, the second a post from a blog,
 
 ## Sharing with Tumblr
 
-Tumblr supports generic photo, text, and video sharing as you might expect, however, by specifying our package you can tell Android you'd like to fire our application directly.  See the below code sampe (which is also in the sample project)
+Tumblr supports generic photo, text, and video sharing as you might expect, however, by specifying our package you can tell Android you'd like to fire our application directly.  See the below code sampe (which is also in the sample project):
 
 ```java
 try {
