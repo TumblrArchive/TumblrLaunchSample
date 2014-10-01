@@ -12,8 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Tumblr sharing superclass that allows for deep linking into the Tumblr app and sharing content to create new
- * Tumblr posts.
+ * Helpful, neighborhood Tumblr utility methods that allow for deep linking into the Tumblr app and sharing content to
+ * create new Tumblr posts.
  *
  * @author brandon
  */
@@ -176,7 +176,7 @@ public class TumblrUtils {
 
 		// Add the body if one was given.
 		if (!TextUtils.isEmpty(body)) {
-			textPostIntent.putExtra(Intent.EXTRA_TEXT, "Body text is here");
+			textPostIntent.putExtra(Intent.EXTRA_TEXT, body);
 		}
 
 		return textPostIntent;
