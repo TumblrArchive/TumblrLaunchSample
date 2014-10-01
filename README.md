@@ -14,7 +14,7 @@ tumblr://x-callback-url/blog?blogName=haseman&postID=94288096341
 tumblr://x-callback-url/tag?tag=cars
 ```
 
-As you might imagine, the first URL opens a blog, the second a post from a blog, and the last a tag.
+As you might imagine, the first URL opens a blog, the second a post from a blog, and the last a search.
 
 ## Sharing with Tumblr
 
