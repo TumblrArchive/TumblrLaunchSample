@@ -1,3 +1,7 @@
+# TumblrLaunchSample
+
+:warning: :warning: :warning: **TUMBLRLAUNCHSAMPLE IS NO LONGER BEING ACTIVELY MAINTAINED.**
+
 #Launching the Tumblr Android application
 
 Our application supports two deep launching approaches.  We use Android's share mechanism (which also allows developer's to share directly into our application) as well as a URL schema.  This document will give example of both.
